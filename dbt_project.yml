@@ -23,6 +23,9 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 
+vars:
+  default_amount: -1
+  
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
@@ -32,5 +35,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_train:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: view
+    marts:
+      +materialized: table
+      warehouse:
+        +materialized: table
+      reporting:
+        +materialized: table

@@ -1,0 +1,4 @@
+version: 2
+
+model:
+  - name: rpt_customers_details

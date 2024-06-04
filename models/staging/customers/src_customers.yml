@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    database: de-public
+    schema: public #src
+    tables:
+      - name: edu_src_customers
